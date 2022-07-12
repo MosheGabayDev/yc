@@ -6,6 +6,7 @@ pipeline {
                 sh """
                     ls
                     pwd
+                    echo "123"
                 """
             }
         }
