@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        AWS_DEFAULT_REGION="us-east-1"
-    }
     stages {
         stage('Build'){
             steps {
@@ -10,16 +7,6 @@ pipeline {
                     ls
                     pwd
                 """
-                withCredentials([aws(
-                    credentialsId: 'private',
-                    accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-                    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-                )]) {
-                    sh '''
-                        echo "123465567"
-                    '''
-                }
-
             }
         }
 
