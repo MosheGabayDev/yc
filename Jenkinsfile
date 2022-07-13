@@ -7,6 +7,7 @@ pipeline {
                     ls
                     pwd
                     echo "123"
+                    docker --version
                 """
             }
         }
